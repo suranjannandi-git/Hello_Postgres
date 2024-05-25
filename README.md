@@ -5,16 +5,24 @@ Install Postgres using docker-compose and consume using python code
 Open terminal session in the same folder as docker-compose.yml file
 
 Execute the docker compose command, this will download Postgres and install in local docker
-```bash docker-compose up -d```
+```bash 
+docker-compose up -d
+```
 
 Verify the container is running 
-```bash docker ps```
+```bash 
+docker ps
+```
 
 View container logs
-```bash docker logs postgres```
+```bash 
+docker logs postgres
+```
 
 Stop the container (when needed)
-```bash docker-compose down```
+```bash 
+docker-compose down
+```
 
 ### Access Postgres database through DBeaver
 Open DBeaver application (incase need to install, https://dbeaver.io/download/)
