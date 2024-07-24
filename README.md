@@ -47,3 +47,8 @@ And Finish
 
 ### Create table and retrieve data from Postgres using python
 Follow the jupyter notebook code 
+
+
+### Trobleshooting
+In case docker-compose is not installed, follow this page for install docker-compose  
+https://github.com/docker/compose/releases
