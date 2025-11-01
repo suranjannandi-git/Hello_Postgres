@@ -2,12 +2,20 @@ from sqlalchemy import create_engine
 import psycopg2
 import pandas as pd 
 
+# # credentials
+# username = 'citizix_user'
+# password = 'S3cret'
+# host = 'localhost'
+# port = 5432
+# database = 'citizix_db'
+
 # credentials
-username = 'citizix_user'
-password = 'S3cret'
-host = 'localhost'
-port = 5432
-database = 'citizix_db'
+username = 'ibm_cloud_61602906_0776_403b_a77a_18e6250da4d5'
+password = 'nvWeIye1BssaVeTt8d1kkZzHu5fgDmKg'
+host = '48a83ffb-6e3f-4d18-901f-06b53fa25ad9.bkvfu0nd0m8k95k94ujg.databases.appdomain.cloud'
+port = 30919
+database = 'ibmclouddb'
+
 
 # Create the connection string
 connection_string = f'postgresql+psycopg2://{username}:{password}@{host}:{port}/{database}'
