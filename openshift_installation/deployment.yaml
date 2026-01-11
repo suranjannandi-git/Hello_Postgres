@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres-expensedb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: postgres-expensedb
+  template:
+    metadata:
+      labels:
+        app: postgres-expensedb
+    spec:
+      containers:
+      - name: postgres
+        image: postgres:latest
+        ports:
+        - containerPort: 5432
+        envFrom:
+        - secretRef:
+            name: postgres-secret-expensedb
+        volumeMounts:
+        - name: postgres-storage
+          mountPath: /var/lib/postgresql/data-expensedb
+        securityContext:
+          runAsUser: 0
+      volumes:
+      - name: postgres-storage
+        persistentVolumeClaim:
+          claimName: postgres-pvc-expensedb
+      imagePullSecrets:
+      - name: postgres-docker-expensedb
